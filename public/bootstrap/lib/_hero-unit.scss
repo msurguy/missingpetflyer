@@ -1,0 +1,33 @@
+//
+// Hero unit
+// --------------------------------------------------
+
+
+.hero-unit {
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: $baseLineHeight * 1.5;
+  color: $heroUnitLeadColor;
+  //background-color: $heroUnitBackground;
+  /* Fallback for web browsers that don't support RGBa */
+  background: rgb(255, 255, 255) transparent;
+  /* RGBa with 0.6 opacity */
+  background: rgba(255, 255, 255, 0.8);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)";
+
+  @include border-radius(3px);
+  @include box-shadow(3px 3px 3px rgba(0,0,0,.2));
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    color: $heroUnitHeadingColor;
+    letter-spacing: -1px;
+  }
+  li {
+    line-height: $baseLineHeight * 1.5; // Reset since we specify in type.scss
+  }
+}

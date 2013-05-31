@@ -1,0 +1,41 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  //background-color: $wellBackground;
+  @include border-radius($baseBorderRadius);
+  @include box-shadow(0 1px 2px rgba(0,0,0,.2));
+  /* Fallback for web browsers that don't support RGBa */
+  background: rgb(255, 255, 255) transparent;
+  /* RGBa with 0.6 opacity */
+  background: rgba(255, 255, 255, 0.8);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)";
+  blockquote {
+    border-color: #ddd;
+    border-color: rgba(0,0,0,.15);
+  }
+  p.footer{
+    //color: $nicered;
+    padding: 10px 0 0 0;
+    border-top: 1px #CCC solid;
+    margin:0;
+  }
+}
+
+// Sizes
+.well-large {
+  padding: 24px;
+  @include border-radius($borderRadiusLarge);
+}
+.well-small {
+  padding: 9px;
+  @include border-radius($borderRadiusLarge);
+}
