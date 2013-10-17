@@ -8,7 +8,7 @@ This application allows the users to upload a picture of a missing pet and creat
 
 It works on mobile - iOS 6 and Android devices and allows cropping of images by selecting the area of the image before previewing the poster.
 
-This application was created in celebration of Laravel 4 release. Please follow me on Twitter for more Laravel info : http://maxoffsky.com and my blog at http://maxoffsky.com 
+This application was created in celebration of Laravel 4 release. Please follow me on Twitter for more Laravel info : http://twitter.com/msurguy and my blog at http://maxoffsky.com 
 
 ### Includes
 
