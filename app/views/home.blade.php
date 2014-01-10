@@ -6,6 +6,11 @@ html, body {
     background:#FFF url(img/subtle_white_feathers.jpg);  
 }
 
+#files img{
+   width: auto;
+   max-width: none;
+}
+
 /* Apply these styles only when #preview-pane has
    been placed within the Jcrop widget */
 .jcrop-holder #preview-pane {
@@ -187,11 +192,17 @@ jQuery(function(){
             var jcrop_api,
                 boundx,
                 boundy;
+
+            var boxSize = 300;
             
             $('#files img').Jcrop({
               onChange: updateCoords,
               onSelect: updateCoords,
-              aspectRatio: 3/2
+              aspectRatio: 3/2,
+              minSize: 200,
+              maxSize: 200,
+              boxWidth: boxSize, 
+              boxHeight: boxSize,
             },function(){
               // Use the API to get the real image size
               var bounds = this.getBounds();
@@ -199,6 +210,7 @@ jQuery(function(){
               boundy = bounds[1];
               // Store the API in the jcrop_api variable
               jcrop_api = this;
+              $(".jcrop-holder").css('margin', '0px auto');
 
               // Move the preview into the jcrop container for css positioning
               //$preview.appendTo(jcrop_api.ui.holder);
